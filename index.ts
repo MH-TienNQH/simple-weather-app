@@ -1,11 +1,11 @@
 const weatherForm = document.querySelector(".weatherForm");
-const cityInput = document.querySelector(".cityInput");
-const card = document.querySelector(".card");
-const apiKey = "42af2a1eca367d07538683b55e4ab480"
+const cityInput : string | Element | null = document.querySelector(".cityInput");
+const card : any  = document.querySelector(".card");
+const apiKey : string= "42af2a1eca367d07538683b55e4ab480"
 
-weatherForm.addEventListener("submit", async event=>{
+weatherForm?.addEventListener("submit", async event=>{
     event.preventDefault();
-    const city = cityInput.value;
+    const city = cityInput;
     if(city){
         try {
             const weatherData = await getWeatherData(city);
